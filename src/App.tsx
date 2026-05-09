@@ -135,13 +135,17 @@ function ConversationInterface() {
                       conversation.isSpeaking ? 'bg-amber-500/10' : 'bg-white/5'
                     }`}
                   >
-                    <img 
-                      src="/naura.png" 
-                      alt="Naura" 
-                      className={`w-full h-full object-cover transition-opacity duration-700 ${
-                        conversation.isSpeaking ? 'opacity-100' : 'opacity-60'
-                      }`}
-                    />
+                    <picture className="w-full h-full">
+                      <source srcSet="/naura.avif" type="image/avif" />
+                      <source srcSet="/naura.webp" type="image/webp" />
+                      <img 
+                        src="/naura.png" 
+                        alt="Naura" 
+                        className={`w-full h-full object-cover transition-opacity duration-700 ${
+                          conversation.isSpeaking ? 'opacity-100' : 'opacity-60'
+                        }`}
+                      />
+                    </picture>
                   </motion.div>
                 </div>
               </motion.div>
@@ -153,7 +157,11 @@ function ConversationInterface() {
                 className="w-64 h-64 rounded-full bg-[#1C1C1E] flex items-center justify-center border border-white/5"
               >
                 <div className="w-32 h-32 rounded-full bg-white/5 flex items-center justify-center border border-white/5 overflow-hidden">
-                  <img src="/naura.png" alt="Naura" className="w-full h-full object-cover opacity-40 grayscale" />
+                  <picture className="w-full h-full">
+                    <source srcSet="/naura.avif" type="image/avif" />
+                    <source srcSet="/naura.webp" type="image/webp" />
+                    <img src="/naura.png" alt="Naura" className="w-full h-full object-cover opacity-40 grayscale" />
+                  </picture>
                 </div>
               </motion.div>
             )}
