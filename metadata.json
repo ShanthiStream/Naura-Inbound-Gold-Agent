@@ -1,0 +1,6 @@
+{
+  "name": "Aman Assistant",
+  "description": "Interactive conversational AI powered by ElevenLabs.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}
